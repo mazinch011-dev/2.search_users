@@ -1,0 +1,173 @@
+/* Reset*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+
+/* Main controls */
+
+.search_box,
+.company_filter {
+    height: 44px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.search_box {
+    width: 320px;
+    padding: 0 14px;
+    margin-right: 10px;
+}
+
+.company_filter {
+    padding: 0 12px;
+    min-width: 220px;
+    cursor: pointer;
+}
+
+.search_box:focus,
+.company_filter:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.search_box::placeholder {
+    color: #9ca3af;
+}
+
+
+
+.loading {
+    text-align: center;
+    margin: 30px 0;
+    color: #6366f1;
+    font-size: 16px;
+}
+
+.error {
+    text-align: center;
+    margin: 30px 0;
+    color: #dc2626;
+    font-weight: 500;
+}
+
+
+
+.people-list {
+    max-width: 1100px;
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.people-list > div {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.people-list > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+.people-list > div {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.people-list p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.people-list p:last-child {
+    color: #4f46e5;
+    font-weight: 600;
+}
+.search_box,
+.company_filter,
+.sort_filter {
+    height: 44px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    color: #374151;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.search_box {
+    width: 320px;
+    padding: 0 14px;
+}
+
+.company_filter,
+.sort_filter {
+    min-width: 190px;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.search_box:focus,
+.company_filter:focus,
+.sort_filter:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.company_filter:hover,
+.sort_filter:hover {
+    border-color: #6366f1;
+}
+
+
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .search_box,
+    .company_filter {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .people-list {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>User Search</h1>
+    <input class="search_box" placeholder="Search by name or email">
+<div>
+<select class="company_filter">
+    <option value="all">All Companies</option>
+    <option value="Romaguera-Crona">Romaguera-Crona</option>
+    <option value="Deckow-Crist">Deckow-Crist</option>
+    <option value="Romaguera-Jacobson">Romaguera-Jacobson</option>
+    <option value="Keebler LLC">Keebler LLC</option>
+    <option value="Considine-Lockman">Considine-Lockman</option>
+    <option value="Johns Group">Johns Group</option>
+    <option value="Abernathy Group">Abernathy Group</option>
+    <option value="Yost and Sons">Yost and Sons</option>
+    <option value="Hoeger LLC">Hoeger LLC</option>
+    <option value="McDermott LLC">McDermott LLC</option>
+</select>
+<select class="sort_filter">
+        <option value="default">Sort by name</option>
+        <option value="az">Name: A → Z</option>
+        <option value="za">Name: Z → A</option>
+</select>
+</div>
+
+<p class="loading">Loading...</p>
+
+<div class="error"></div>
+
+<div class="people-list"></div>
+</body>
+</html>
